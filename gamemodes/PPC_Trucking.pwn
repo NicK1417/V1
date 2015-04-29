@@ -597,7 +597,8 @@ public OnPlayerSpawn(playerid)
 	SetPlayerInterior(playerid, 0);
 	// Also set a variable that tracks in which house the player currently is
 	APlayerData[playerid][CurrentHouse] = 0;
-
+	APlayerData[playerid][CurrentBusiness] = 0;
+	
 	// Disable the clock
 	TogglePlayerClock(playerid, 0);
 
