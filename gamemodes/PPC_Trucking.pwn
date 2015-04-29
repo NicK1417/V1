@@ -321,7 +321,9 @@ public OnPlayerDisconnect(playerid, reason)
 	APlayerData[playerid][BankPassword] = 0;
 	APlayerData[playerid][BankLoggedIn] = false;
 	APlayerData[playerid][BankMoney] = 0;
-
+	APlayerData[playerid][UseMoney] = 0;
+	APlayerData[playerid][LastIntrestTime] = 0; // Bug: If this does not reset, and someone held this ID, new ones that connect and create bank, to redo the login bear interest.
+	
 	// Clear stats
 	APlayerData[playerid][StatsTruckerJobs] = 0;
 	APlayerData[playerid][StatsConvoyJobs] = 0;
